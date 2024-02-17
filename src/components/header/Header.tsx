@@ -5,12 +5,16 @@ import { Link, useLocation } from "react-router-dom";
 const Header = () => {
   const { pathname } = useLocation();
   const path = pathname.split("/");
-  const navTarget = ["blog", "contacts", "faq", "about"];
+  const navTarget = ["", "contatti", "faq", "informazioni"];
   const activeNav = navTarget.find((nav) => nav === path[1]);
   return (
     <div className={styles.wrap}>
       <Link to="/">
-        <img style={{ height: "7vh" }} src={logo} alt="logo" />
+        <img
+          style={{ height: "7vh", marginLeft: "10px" }}
+          src={logo}
+          alt="logo"
+        />
       </Link>
       <nav>
         {navTarget.map((nav) => (
@@ -21,7 +25,7 @@ const Header = () => {
               nav === activeNav ? styles.active : ""
             }`}
           >
-            {nav}
+            {nav || "blog"}
           </Link>
         ))}
       </nav>
