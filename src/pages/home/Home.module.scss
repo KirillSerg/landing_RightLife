@@ -26,4 +26,29 @@
       }
     }
   }
+  .advantages {
+    text-align: center;
+    font-size: 32px;
+    .info {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5%;
+      .img {
+        width: 30%;
+        height: 500px;
+        background: url(../../assets/advantage1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      p {
+        text-align: left;
+        font-size: 20px;
+        width: 60%;
+        word-wrap: break-word;
+      }
+    }
+  }
 }

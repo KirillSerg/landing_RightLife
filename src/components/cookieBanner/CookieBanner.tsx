@@ -33,7 +33,7 @@ const CookieBanner = () => {
         background: "#2B373B",
         opacity: "0.95",
         position: "fixed",
-        top: `${show ? "100vh" : "calc(100vh - 10vh)"}`,
+        top: `${show ? "100vh" : "calc(100vh - var(--footer-height))"}`,
         transition: "top 2s",
       }}
       buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
