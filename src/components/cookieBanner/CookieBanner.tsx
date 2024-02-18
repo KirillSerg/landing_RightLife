@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import CookieConsent, { getCookieConsentValue } from "react-cookie-consent";
 import { Link } from "react-router-dom";
 
-const CookieBanner = () => {
+const CookieBanner: React.FC = () => {
   const isHaveCookie =
     getCookieConsentValue("cookieConsent") === "false" ||
     getCookieConsentValue("cookieConsent") === "true";

@@ -1,6 +1,7 @@
+import Form from "../../components/form/Form";
 import styles from "./Home.module.scss";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <div className={styles.wrap}>
       <section className={styles.hero}>
@@ -43,6 +44,7 @@ const Home = () => {
           </p>
         </div>
       </section>
+      <Form />
     </div>
   );
 };

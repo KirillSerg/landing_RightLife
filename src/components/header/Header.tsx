@@ -2,7 +2,7 @@ import styles from "./Header.module.scss";
 import logo from "../../assets/logo.svg";
 import { Link, useLocation } from "react-router-dom";
 
-const Header = () => {
+const Header: React.FC = () => {
   const { pathname } = useLocation();
   const path = pathname.split("/");
   const navTarget = ["", "contatti", "faq", "informazioni"];

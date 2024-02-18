@@ -1,6 +1,6 @@
 import styles from "./Thanks.module.scss";
 
-const Thanks = () => {
+const Thanks: React.FC = () => {
   return <div className={styles.wrap}>Thanks</div>;
 };
 

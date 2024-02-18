@@ -28,7 +28,9 @@
   }
   .advantages {
     text-align: center;
-    font-size: 32px;
+    h1 {
+      font-size: 32px;
+    }
     .info {
       width: 100%;
       display: flex;

@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import styles from "./Footer.module.scss";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const { pathname } = useLocation();
   const path = pathname.split("/");
   const navTarget = [
