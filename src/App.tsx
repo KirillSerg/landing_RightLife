@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import NotFound from "./pages/notFound/NotFound";
 import Footer from "./components/footer/Footer";
 import Thanks from "./pages/thanks/Thanks";
+import CookieBanner from "./components/cookieBanner/CookieBanner";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       </Routes>
 
       <Footer />
+      <CookieBanner />
     </>
   );
 };
