@@ -20,7 +20,7 @@ const schema = yup
     phone: yup
       .string()
       .required()
-      .matches(/^(\+3)$/, "dovrebbe iniziare con il codice del tuo paese +3"),
+      .matches(/^(\+3)/, "dovrebbe iniziare con il codice del tuo paese +3"),
   })
   .required();
 
@@ -85,13 +85,17 @@ const Form: React.FC = () => {
               {...register("phone")}
             />
             <div>
-              <label className={styles.label}>+3X (XXX) XXX - XX - XX</label>
+              <label className={styles.label}>+3X (XXX) XXX - ...</label>
             </div>
             <span>{errors?.phone?.message || ""}</span>
           </div>
         </div>
 
-        <button disabled={!isValid} type="submit">
+        <button
+          className={`${!!errors?.phone?.message && styles.active}`}
+          disabled={!isValid}
+          type="submit"
+        >
           Inviare
         </button>
       </form>

@@ -44,7 +44,19 @@ const Home: React.FC = () => {
           </p>
         </div>
       </section>
+
       <Form />
+
+      <section className={styles.map}>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11190.902728408879!2d9.1564425!3d45.4753296!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c147aa41b7cf%3A0xfbbcb44d7ec5c615!2sArco%20della%20Pace!5e0!3m2!1sru!2sua!4v1708285448969!5m2!1sru!2sua"
+          width="800"
+          height="450"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
     </div>
   );
 };
