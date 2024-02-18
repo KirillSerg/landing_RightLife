@@ -1,0 +1,13 @@
+.wrap {
+  width: 100%;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    all: unset;
+    font-size: 32px;
+    font-weight: 700;
+  }
+}

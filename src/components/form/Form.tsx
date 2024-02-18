@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import styles from "./Form.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const schema = yup
   .object({
@@ -27,6 +28,8 @@ const schema = yup
 export type FormData = yup.InferType<typeof schema>;
 
 const Form: React.FC = () => {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -43,6 +46,7 @@ const Form: React.FC = () => {
     formData.append("phone", data.phone);
 
     console.log(formData);
+    navigate("/thanks");
   };
 
   return (
@@ -92,7 +96,7 @@ const Form: React.FC = () => {
         </div>
 
         <button
-          className={`${!!errors?.phone?.message && styles.active}`}
+          className={`${isValid && styles.active}`}
           disabled={!isValid}
           type="submit"
         >
